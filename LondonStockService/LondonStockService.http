@@ -1,0 +1,29 @@
+@LondonStockService_HostAddress = http://localhost:5156
+
+POST {{LondonStockService_HostAddress}}/trades/
+Content-Type: application/json
+Accept: application/json
+
+{
+  "stockId": "CCC",
+  "price": 52330,
+  "noOfShares": 3,
+  "brokerId": "BrokerA"
+}
+
+###
+
+GET {{LondonStockService_HostAddress}}/stocks
+Accept: application/json
+
+###
+
+GET {{LondonStockService_HostAddress}}/stocks?stockIds=AAA
+Accept: application/json
+
+###
+
+GET {{LondonStockService_HostAddress}}/stocks?stockIds=AAA&stockIds=BBB&stockIds=CCC
+Accept: application/json
+
+###
